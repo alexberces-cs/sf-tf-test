@@ -1,3 +1,11 @@
+terraform {
+  required_providers {
+    snowflake = {
+      source = "snowflakedb/snowflake"
+    }
+  }
+}
+
 resource "snowflake_warehouse" "tf_warehouse" {
   name                      = var.warehouse_name
   warehouse_type            = "STANDARD"
