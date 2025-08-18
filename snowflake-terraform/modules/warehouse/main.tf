@@ -1,10 +1,5 @@
-resource "snowflake_database" "tf_db" {
-  name         = "TF_DEMO_DB"
-  is_transient = false
-}
-
 resource "snowflake_warehouse" "tf_warehouse" {
-  name                      = "TF_DEMO_WH"
+  name                      = var.warehouse_name
   warehouse_type            = "STANDARD"
   warehouse_size            = "XSMALL"
   max_cluster_count         = 1

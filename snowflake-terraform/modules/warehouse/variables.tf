@@ -1,0 +1,1 @@
+variable "warehouse_name" {}

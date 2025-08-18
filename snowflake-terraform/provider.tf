@@ -19,8 +19,3 @@ provider "snowflake" {
     role              = var.snowflake_role
     private_key       = base64decode(var.snowflake_private_key)
 }
-
-variable "snowflake_account" {}
-variable "snowflake_user" {}
-variable "snowflake_role" {}
-variable "snowflake_private_key" {}
