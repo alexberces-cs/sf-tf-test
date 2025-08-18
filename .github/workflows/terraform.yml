@@ -34,7 +34,9 @@ jobs:
 
       - name: Terraform Plan
         if: github.event_name == 'pull_request'
-        run: terraform plan
+        run: |
+          export TF_LOG=DEBUG
+          terraform plan
         working-directory: snowflake-terraform
         env:
           SNOWFLAKE_ORG: ${{ secrets.SNOWFLAKE_ORG }}
