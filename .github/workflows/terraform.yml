@@ -41,19 +41,19 @@ jobs:
           terraform plan
         working-directory: snowflake-terraform
         env:
-          snowflake_org: ${{ secrets.SNOWFLAKE_ORG }}
-          snowflake_account: ${{ secrets.SNOWFLAKE_ACCOUNT }}
-          snowflake_user: ${{ secrets.SNOWFLAKE_USER }}
-          snowflake_role: ${{ secrets.SNOWFLAKE_ROLE }}
-          snowflake_private_key: ${{ secrets.SNOWFLAKE_PRIVATE_KEY }}
+          TF_VAR_snowflake_org: ${{ secrets.SNOWFLAKE_ORG }}
+          TF_VAR_snowflake_account: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+          TF_VAR_snowflake_user: ${{ secrets.SNOWFLAKE_USER }}
+          TF_VAR_snowflake_role: ${{ secrets.SNOWFLAKE_ROLE }}
+          TF_VAR_snowflake_private_key: ${{ secrets.SNOWFLAKE_PRIVATE_KEY }}
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply -auto-approve
         working-directory: snowflake-terraform
         env:
-          snowflake_org: ${{ secrets.SNOWFLAKE_ORG }}
-          snowflake_account: ${{ secrets.SNOWFLAKE_ACCOUNT }}
-          snowflake_user: ${{ secrets.SNOWFLAKE_USER }}
-          snowflake_role: ${{ secrets.SNOWFLAKE_ROLE }}
-          snowflake_private_key: ${{ secrets.SNOWFLAKE_PRIVATE_KEY }}
+          TF_VAR_snowflake_org: ${{ secrets.SNOWFLAKE_ORG }}
+          TF_VAR_snowflake_account: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+          TF_VAR_snowflake_user: ${{ secrets.SNOWFLAKE_USER }}
+          TF_VAR_snowflake_role: ${{ secrets.SNOWFLAKE_ROLE }}
+          TF_VAR_snowflake_private_key: ${{ secrets.SNOWFLAKE_PRIVATE_KEY }}
