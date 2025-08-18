@@ -8,7 +8,8 @@ terraform {
 }
 
 provider "snowflake" {
-    account           = var.snowflake_account
+    organization_name = var.snowflake_org
+    account_name      = var.snowflake_account
     user              = var.snowflake_user
     role              = var.snowflake_role
     private_key       = base64decode(var.snowflake_private_key)
