@@ -21,13 +21,17 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
+        working-directory: snowflake-terraform
 
       - name: Terraform Validate
         run: terraform validate
+        working-directory: snowflake-terraform
+
 
       - name: Terraform Plan
         if: github.event_name == 'pull_request'
         run: terraform plan
+        working-directory: snowflake-terraform
         env:
           SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
           SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
@@ -38,6 +42,7 @@ jobs:
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply -auto-approve
+        working-directory: snowflake-terraform
         env:
           SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
           SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
