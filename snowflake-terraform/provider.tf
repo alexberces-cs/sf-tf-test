@@ -12,5 +12,5 @@ provider "snowflake" {
     account_name      = var.snowflake_account
     user              = var.snowflake_user
     role              = var.snowflake_role
-    private_key       = base64decode(var.snowflake_private_key)
+    private_key       = var.snowflake_private_key
 }
