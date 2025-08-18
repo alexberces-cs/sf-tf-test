@@ -37,6 +37,7 @@ jobs:
         run: terraform plan
         working-directory: snowflake-terraform
         env:
+          SNOWFLAKE_ORG: ${{ secrets.SNOWFLAKE_ORG }}
           SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
           SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
           SNOWFLAKE_ROLE: ${{ secrets.SNOWFLAKE_ROLE }}
@@ -48,6 +49,7 @@ jobs:
         run: terraform apply -auto-approve
         working-directory: snowflake-terraform
         env:
+          SNOWFLAKE_ORG: ${{ secrets.SNOWFLAKE_ORG }}
           SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
           SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
           SNOWFLAKE_ROLE: ${{ secrets.SNOWFLAKE_ROLE }}
