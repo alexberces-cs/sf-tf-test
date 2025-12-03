@@ -1,2 +1,2 @@
-variable "elt_dev_role_name" {}
-variable "bi_dev_role_name" {}
+variable "elt_role_name" {}
+variable "bi_role_name" {}

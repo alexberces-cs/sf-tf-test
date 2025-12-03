@@ -6,7 +6,7 @@ terraform {
   }
 }
 
-resource "snowflake_grant_database_role" "grant_elt_dev_db_role" {
-  database_role_name = "\"${var.dev_db_name}\".\"${var.elt_dev_db_role_name}\""
-  parent_role_name   = var.elt_dev_role_name
+resource "snowflake_grant_database_role" "grant_elt_db_role" {
+  database_role_name = "\"${var.db_name}\".\"${var.elt_db_role_name}\""
+  parent_role_name   = var.elt_role_name
 }

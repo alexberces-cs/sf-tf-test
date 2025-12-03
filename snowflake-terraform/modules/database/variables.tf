@@ -1,1 +1,1 @@
-variable "dev_db_name" {}
+variable "db_name" {}
