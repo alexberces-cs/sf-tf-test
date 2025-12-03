@@ -19,7 +19,7 @@ module "schema" {
 module "account_roles" {
   source            = "./modules/account_roles"
   elt_dev_role_name = var.elt_dev_role_name
-  bi_dev_db_role    = var.bi_dev_db_role
+  bi_dev_role_name    = var.bi_dev_role_name
 }
 
 module "database_roles" {
