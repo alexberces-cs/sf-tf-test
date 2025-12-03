@@ -10,16 +10,16 @@ module "warehouse" {
 }
 
 module "schema" {
-  source      = "./modules/schema"
-  for_each    = toset(var.schema_name)
-  schema_name = each.key
-  dev_db_name = module.database.dev_db_name
+  source             = "./modules/schema"
+  for_each           = toset(var.dev_db_schema_name)
+  dev_db_schema_name = each.key
+  dev_db_name        = module.database.dev_db_name
 }
 
 module "account_roles" {
   source            = "./modules/account_roles"
   elt_dev_role_name = var.elt_dev_role_name
-  bi_dev_role_name    = var.bi_dev_role_name
+  bi_dev_role_name  = var.bi_dev_role_name
 }
 
 module "database_roles" {
