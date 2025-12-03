@@ -3,5 +3,5 @@ output "elt_dev_role_name" {
 }
 
 output "bi_dev_role_name" {
-  value = snowflakedb.bi_dev_role.name
+  value = snowflake_account_role.bi_dev_role.name
 }
