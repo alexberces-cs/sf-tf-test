@@ -6,7 +6,7 @@ elt_dev_wh_name = "ELT_DEV_WH"
 bi_dev_wh_name  = "BI_DEV_WH"
 
 # schema
-dev_db_schema_name = ["ACQ", "TGT", "TRF"]
+dev_db_schema_name = ["ACQ", "INT", "TGT", "TRF"]
 
 # roles
 elt_dev_role_name    = "ELT_DEV_ROLE"
