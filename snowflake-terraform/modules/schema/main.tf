@@ -6,7 +6,7 @@ terraform {
   }
 }
 
-resource "snowflake_schema" "tf_schema" {
-  name     = var.schema_name
-  database = var.database_name
+resource "snowflake_schema" "dev_db_schema" {
+  name     = var.dev_db_schema_name
+  database = var.dev_db_name
 }

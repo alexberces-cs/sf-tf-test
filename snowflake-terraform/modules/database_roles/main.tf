@@ -6,8 +6,14 @@ terraform {
   }
 }
 
-resource "snowflake_database_role" "sf_elt_dev_db_role" {
+resource "snowflake_database_role" "elt_dev_db_role" {
   name     = var.elt_dev_db_role_name
-  database = var.database_name
+  database = var.dev_db_name
   comment  = "Database Role for ELT developers"
+}
+
+resource "snowflake_database_role" "bi_dev_db_role" {
+  name     = var.bi_dev_db_role_name
+  database = var.dev_db_name
+  comment  = "Database Role for BI analysts"
 }

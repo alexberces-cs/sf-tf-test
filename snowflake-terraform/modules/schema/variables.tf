@@ -1,2 +1,2 @@
-variable "database_name" {}
-variable "schema_name" {}
+variable "dev_db_name" {}
+variable "dev_db_schema_name" {}

@@ -1,3 +1,3 @@
-output "database_name" {
-  value = snowflake_database.tf_db.name
+output "dev_db_name" {
+  value = snowflake_database.dev_db.name
 }
