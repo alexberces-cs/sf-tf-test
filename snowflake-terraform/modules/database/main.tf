@@ -6,7 +6,7 @@ terraform {
   }
 }
 
-resource "snowflake_database" "dev_db" {
-  name         = var.dev_db_name
+resource "snowflake_database" "db" {
+  name         = var.db_name
   is_transient = false
 }

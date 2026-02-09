@@ -1,3 +1,3 @@
-variable "elt_dev_role_name" {}
-variable "elt_dev_db_role_name" {}
-variable "dev_db_name" {}
+variable "elt_role_name" {}
+variable "elt_db_role_name" {}
+variable "db_name" {}

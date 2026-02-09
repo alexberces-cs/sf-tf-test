@@ -1,4 +1,4 @@
-variable "elt_dev_db_role_name" {}
-variable "bi_dev_db_role_name" {}
+variable "elt_db_role_name" {}
+variable "bi_db_role_name" {}
 
-variable "dev_db_name" {}
+variable "db_name" {}

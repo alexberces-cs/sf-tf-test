@@ -6,8 +6,8 @@ terraform {
   }
 }
 
-resource "snowflake_warehouse" "elt_dev_wh" {
-  name                      = var.elt_dev_wh_name
+resource "snowflake_warehouse" "elt_wh" {
+  name                      = var.elt_wh_name
   warehouse_type            = "STANDARD"
   warehouse_size            = "XSMALL"
   max_cluster_count         = 1
@@ -18,8 +18,8 @@ resource "snowflake_warehouse" "elt_dev_wh" {
   initially_suspended       = true
 }
 
-resource "snowflake_warehouse" "bi_dev_wh" {
-  name                      = var.bi_dev_wh_name
+resource "snowflake_warehouse" "bi_wh" {
+  name                      = var.bi_wh_name
   warehouse_type            = "STANDARD"
   warehouse_size            = "XSMALL"
   max_cluster_count         = 1
