@@ -6,7 +6,6 @@ terraform {
   }
 }
 
-/*
 provider "snowflake" {
   organization_name = var.snowflake_org
   account_name      = var.snowflake_account
@@ -14,9 +13,9 @@ provider "snowflake" {
   role              = var.snowflake_role
   authenticator     = "SNOWFLAKE_JWT"
   private_key       = var.snowflake_private_key
-}*/
+}
 
-/* for local testing purposes*/
+/* for local testing purposes
 provider "snowflake" {
   organization_name = "DETUXDN"
   account_name      = "BP08388"
@@ -25,3 +24,4 @@ provider "snowflake" {
   authenticator     = "SNOWFLAKE_JWT"
   private_key       = file("~/.ssh/snowflake_tf_snow_key.p8")
 }
+*/
