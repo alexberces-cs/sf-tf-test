@@ -30,9 +30,9 @@ module "database_roles" {
 }
 
 module "grants" {
-  source           = "./modules/grants"
-  elt_role_name    = module.account_roles.elt_role_name
-  bi_role_name     = module.account_roles.bi_role_name
-  elt_db_role      = module.database_roles.elt_db_role
-  bi_db_role       = module.database_roles.bi_db_role
+  source        = "./modules/grants"
+  elt_role_name = module.account_roles.elt_role_name
+  bi_role_name  = module.account_roles.bi_role_name
+  elt_db_role   = module.database_roles.elt_db_role
+  bi_db_role    = module.database_roles.bi_db_role
 }
