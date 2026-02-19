@@ -11,4 +11,7 @@ variable "bi_wh_name" {}
 variable "db_schema_name" {}
 
 variable "elt_role_name" {}
+variable "elt_db_role_name" {}
+
 variable "bi_role_name" {}
+variable "bi_db_role_name" {}
